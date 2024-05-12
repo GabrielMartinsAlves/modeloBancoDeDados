@@ -11,16 +11,14 @@
 </div>
 
 [Imagem em PNG](assets/imagemBD.png)
+
 [Modelo em XML](assets/modelagem.xml)
 
 ***Tabela MANUALS:***
-
-
 &nbsp;&nbsp;&nbsp;&nbsp;Esta tabela armazena informações sobre os manuais utilizados para o aprendizado da montagem de produtos. Cada manual é identificado por um ID único, que é um número inteiro sequencial. As datas de publicação são armazenadas como tipos de dados DATE. As descrições dos manuais são armazenadas em campos do tipo VARCHAR, permitindo até 350 caracteres. Os títulos dos manuais são campos do tipo VARCHAR, com um limite de até 80 caracteres, e possuem um valor padrão de 'Sem Título' quando não especificados. As versões dos manuais são representadas por números decimais, armazenados como tipos de dados DECIMAL, com um valor padrão de 0.1.
 - **Cardinalidade:** Um manual pode estar associado a muitos itens de tarefas (TO-DOS), pois vários funcionários podem ter a mesma tarefa de ler um manual. 
 
 ***Tabela EMPLOYEES:***
-
 &nbsp;&nbsp;&nbsp;&nbsp;Esta entidade mantém registros de todos os funcionários da empresa, incluindo engenheiros e operadores de linha de montagem. Cada funcionário é identificado por um ID único, que é um número inteiro sequencial. Os nomes dos funcionários são armazenados em campos do tipo VARCHAR, com um limite de até 200 caracteres. O campo IsEngineer é do tipo BOOLEAN, representando se o funcionário é ou não um engenheiro. Os e-mails e senhas dos funcionários são armazenados em campos do tipo VARCHAR, com limites de até 120 e 50 caracteres, respectivamente.
 - **Cardinalidade:** Um funcionário pode ter muitas tarefas (TO-DOS), pois pode ser atribuído a ler vários manuais. Um funcionário também pode estar associado a várias linhas de montagem (ASSEMBLY_LINES) através da tabela de associação muitos para muitos (ASSEMBLY_LINES__EMPLOYEES).
 
