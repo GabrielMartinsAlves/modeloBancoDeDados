@@ -10,8 +10,8 @@
 <sup>Fonte: Material elaborado pelo autor (2024).</sup>
 </div>
 
-[Imagem em PNG](src="assets/imagemBD.png")
-[Modelo em XML](src="assets/modelagem.xml")
+[Imagem em PNG](assets/imagemBD.png)
+[Modelo em XML](assets/modelagem.xml)
 
 ***Tabela MANUALS:***
 
