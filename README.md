@@ -15,10 +15,12 @@
 [Modelo em XML](assets/modelagem.xml)
 
 ***Tabela MANUALS:***
+
 &nbsp;&nbsp;&nbsp;&nbsp;Esta tabela armazena informações sobre os manuais utilizados para o aprendizado da montagem de produtos. Cada manual é identificado por um ID único, que é um número inteiro sequencial. As datas de publicação são armazenadas como tipos de dados DATE. As descrições dos manuais são armazenadas em campos do tipo VARCHAR, permitindo até 350 caracteres. Os títulos dos manuais são campos do tipo VARCHAR, com um limite de até 80 caracteres, e possuem um valor padrão de 'Sem Título' quando não especificados. As versões dos manuais são representadas por números decimais, armazenados como tipos de dados DECIMAL, com um valor padrão de 0.1.
 - **Cardinalidade:** Um manual pode estar associado a muitos itens de tarefas (TO-DOS), pois vários funcionários podem ter a mesma tarefa de ler um manual. 
 
 ***Tabela EMPLOYEES:***
+
 &nbsp;&nbsp;&nbsp;&nbsp;Esta entidade mantém registros de todos os funcionários da empresa, incluindo engenheiros e operadores de linha de montagem. Cada funcionário é identificado por um ID único, que é um número inteiro sequencial. Os nomes dos funcionários são armazenados em campos do tipo VARCHAR, com um limite de até 200 caracteres. O campo IsEngineer é do tipo BOOLEAN, representando se o funcionário é ou não um engenheiro. Os e-mails e senhas dos funcionários são armazenados em campos do tipo VARCHAR, com limites de até 120 e 50 caracteres, respectivamente.
 - **Cardinalidade:** Um funcionário pode ter muitas tarefas (TO-DOS), pois pode ser atribuído a ler vários manuais. Um funcionário também pode estar associado a várias linhas de montagem (ASSEMBLY_LINES) através da tabela de associação muitos para muitos (ASSEMBLY_LINES__EMPLOYEES).
 
@@ -47,7 +49,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;Esta entidade mantém os arquivos utilizados nos manuais. Cada material é identificado por um ID único, que é um número inteiro sequencial. Os IDs dos manuais associados aos materiais são armazenados como chaves estrangeiras, referenciando as chaves primárias da tabela MANUALS. Os caminhos para os arquivos são armazenados em campos do tipo VARCHAR, com um limite de até 150 caracteres. Os tipos de arquivos (PDF, vídeo, modelo 3D, etc.) são representados por campos do tipo CHAR, com um limite de até 50 caracteres. Os títulos e descrições opcionais dos materiais são armazenados em campos do tipo VARCHAR, com limites de até 80 e 350 caracteres, respectivamente.
 - **Cardinalidade:** Um material está associado a um único manual. Um manual pode ter muitos materiais associados.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Portanto, observa-se que a modelagem física estabelece as bases para a integridade e a precisão dos dados. A definição das relações entre as entidades, juntamente com a especificação dos tipos de dados e a atribuição de chaves primárias e estrangeiras, garante a consistência dos dados e a integridade referencial. Além disso, a modelagem física facilita a otimização do desempenho do banco de dados, tornando mais eficiente o acesso e manipulação dos dados.
+&nbsp;&nbsp;&nbsp;&nbsp;Portanto, observa-se que a modelagem física estabelece o que é essencial para a integridade e a precisão dos dados. A definição das relações entre as entidades, juntamente com a especificação dos tipos de dados e a atribuição de chaves primárias e estrangeiras, garante a consistência dos dados e a integridade referencial. Além disso, a modelagem física facilita a otimização do desempenho do banco de dados, tornando mais eficiente o acesso e manipulação dos dados.
+
+
+## Código executável no DBeaver
 
 **OBS**: o código deve ser executado linha a linha para que funcione de maneira adequada. Caso esteja usando o *DBeaver* selecione todo o código e pressione as teclas `ALT + X` para executá-lo linha a linha.
 
